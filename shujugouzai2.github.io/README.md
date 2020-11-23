@@ -1,0 +1,1 @@
+# shujugouzai2.github.io
