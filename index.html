@@ -95,24 +95,17 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,ol,ul,li,figcaption,textarea,input{fon
 </section>
 
 <section>
-    <meta charset="UTF-8">
-    <title>Awesome-pyecharts</title>
-    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
-
-</section>
-<section>
-    <div id="db6b508bd5204a6fa064b907fb70352e" class="chart-container" style="width:1280px; height:720px;"></div>
-    <script>
-        var chart_db6b508bd5204a6fa064b907fb70352e = echarts.init(
-            document.getElementById('db6b508bd5204a6fa064b907fb70352e'), 'white', {renderer: 'canvas'});
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <!-- 引入 echarts.js -->
     <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 	<script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/china.js"></script>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
+ 
+        // 指定图表的配置项和数据
         var option = {
     title : {
         text: '2019年中国各省粗离婚率',
@@ -200,7 +193,10 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,ol,ul,li,figcaption,textarea,input{fon
         }
     ]
 };
+ 
+        // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+    </script>
 </section>	
 	
 <section class="header4 cid-sgpC9x29qA" id="header4-0">
