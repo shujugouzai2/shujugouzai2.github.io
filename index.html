@@ -251,114 +251,115 @@ div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,ol,ul,li,figcaption,textarea,input{fon
 </section>
 
 =======
+
 <section>
-    <meta charset="utf-8">
-    <!-- 引入 echarts.js -->
-    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
-	<script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/china.js"></script>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 900px;height:600px;margin-left:300px; margin-right:300px; margin-top:80px;margin-bottom:80px;"></div>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
- 
-        // 指定图表的配置项和数据
-        var option = {
-    title : {
-        text: '2019年中国各省粗离婚率',
-        subtext: '数据来自国家统计局',
-        left: 'center'
-    },
-    tooltip : {
-        trigger: 'item'
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data:['离婚率']
-    },
-    visualMap: {
-        min: 1,
-        max: 5,
-        left: 'left',
-        top: 'bottom',
-        text:['高','低'],           // 文本，默认为数值文本
-        calculable : true
-    },
-    toolbox: {
-        show: true,
-        orient : 'vertical',
-        left: 'right',
-        top: 'center',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    series : [
-        {
-            name: '离婚率',
-            type: 'map',
-            mapType: 'china',
-            roam: false,
-            label: {
-                normal: {
-                    show: false
-                },
-                emphasis: {
-                    show: true
-                }
-            },
-            data:[
-                {name: '北京',value:3.89},
-                {name: '天津',value:4.78},
-                {name: '上海',value:2.54},
-                {name: '重庆',value:5.00},
-                {name: '河北',value:3.37},
-                {name: '河南',value:3.70},
-                {name: '云南',value:2.97},
-                {name: '辽宁',value:4.56},
-                {name: '黑龙江',value:4.98},
-                {name: '湖南',value:3.19},
-                {name: '安徽',value:3.93},
-                {name: '山东',value:2.83},
-                {name: '新疆',value:2.90},
-                {name: '江苏',value:3.71},
-                {name: '浙江',value:2.64},
-                {name: '江西',value:2.83},
-                {name: '湖北',value:3.58},
-                {name: '广西',value:2.88},
-                {name: '甘肃',value:2.35},
-                {name: '山西',value:2.45},
-                {name: '内蒙古',value:3.93},
-                {name: '陕西',value:3.53},
-                {name: '吉林',value:4.83},
-                {name: '福建',value:2.83},
-                {name: '贵州',value:4.59},
-                {name: '广东',value:2.15},
-                {name: '青海',value:3.04},
-                {name: '西藏',value:1.50},
-                {name: '四川',value:3.81},
-                {name: '宁夏',value:3.51},
-                {name: '海南',value:2.27},
-                {name: '台湾',value:0},
-                {name: '香港',value:0},
-                {name: '澳门',value:0}
-            ]
-        }
-    ]
+<meta charset="utf-8">
+<!-- 引入 echarts.js -->
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script type="text/javascript" src="https://github.com/apache/echarts/blob/master/test/data/map/js/china.js"></script>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 900px;height:600px;margin-left:300px; margin-right:300px; margin-top:80px;margin-bottom:80px;"></div>
+<script type="text/javascript">
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+
+// 指定图表的配置项和数据
+var option = {
+title : {
+text: '2019年中国各省粗离婚率',
+subtext: '数据来自国家统计局',
+left: 'center'
+},
+tooltip : {
+trigger: 'item'
+},
+legend: {
+orient: 'vertical',
+left: 'left',
+data:['离婚率']
+},
+visualMap: {
+min: 1,
+max: 5,
+left: 'left',
+top: 'bottom',
+text:['高','低'], // 文本，默认为数值文本
+calculable : true
+},
+toolbox: {
+show: true,
+orient : 'vertical',
+left: 'right',
+top: 'center',
+feature : {
+mark : {show: true},
+dataView : {show: true, readOnly: false},
+restore : {show: true},
+saveAsImage : {show: true}
+}
+},
+series : [
+{
+name: '离婚率',
+type: 'map',
+mapType: 'china',
+roam: false,
+label: {
+normal: {
+show: false
+},
+emphasis: {
+show: true
+}
+},
+data:[
+{name: '北京',value:3.89},
+{name: '天津',value:4.78},
+{name: '上海',value:2.54},
+{name: '重庆',value:5.00},
+{name: '河北',value:3.37},
+{name: '河南',value:3.70},
+{name: '云南',value:2.97},
+{name: '辽宁',value:4.56},
+{name: '黑龙江',value:4.98},
+{name: '湖南',value:3.19},
+{name: '安徽',value:3.93},
+{name: '山东',value:2.83},
+{name: '新疆',value:2.90},
+{name: '江苏',value:3.71},
+{name: '浙江',value:2.64},
+{name: '江西',value:2.83},
+{name: '湖北',value:3.58},
+{name: '广西',value:2.88},
+{name: '甘肃',value:2.35},
+{name: '山西',value:2.45},
+{name: '内蒙古',value:3.93},
+{name: '陕西',value:3.53},
+{name: '吉林',value:4.83},
+{name: '福建',value:2.83},
+{name: '贵州',value:4.59},
+{name: '广东',value:2.15},
+{name: '青海',value:3.04},
+{name: '西藏',value:1.50},
+{name: '四川',value:3.81},
+{name: '宁夏',value:3.51},
+{name: '海南',value:2.27},
+{name: '台湾',value:0},
+{name: '香港',value:0},
+{name: '澳门',value:0}
+]
+}
+]
 };
- 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-    <script type="text/javascript">
-	    $('.app').css({'display':'table','text-align':'center'});
-	    $('.img').css({'display':'table-cell','vertical-align':'middle'});
-     </script>
-</section>	
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+<script type="text/javascript">
+$('.app').css({'display':'table','text-align':'center'});
+$('.img').css({'display':'table-cell','vertical-align':'middle'});
+</script>
+</section> 	
 	
 >>>>>>> ac5f35ec572249e925281178d90544c09666b89d
 <section class="header4 cid-sgpC9x29qA" id="header4-0">
